@@ -1,0 +1,412 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f4f6f9;
+
+    color: #333;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+h1 {
+    text-align: center;
+
+    color: #222;
+
+    margin-bottom: 8px;
+}
+
+
+.subtitle {
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   EXPENSE FORM
+========================= */
+
+.expense-form {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   FORM GROUP
+========================= */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.form-group label {
+    margin-bottom: 7px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+.form-group input,
+.form-group select {
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   GENERAL BUTTON
+========================= */
+
+button {
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    background: #1d4ed8;
+}
+
+
+button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+#addExpenseBtn {
+    grid-column: span 2;
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+.summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin: 25px 0;
+}
+
+
+.summary-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.summary-card h3 {
+    color: #666;
+
+    margin-bottom: 10px;
+}
+
+
+.summary-card p {
+    font-size: 28px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.table-container {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   TABLE HEADER
+========================= */
+
+.table-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.table-header h2 {
+    margin: 0;
+}
+
+
+/* =========================
+   AI BUTTON
+========================= */
+
+.ai-button {
+    background: #7c3aed;
+
+    white-space: nowrap;
+}
+
+
+.ai-button:hover {
+    background: #6d28d9;
+}
+
+
+/* =========================
+   AI RESULT
+========================= */
+
+.ai-result {
+    background: #f5f3ff;
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    color: #333;
+
+    line-height: 1.7;
+
+    white-space: pre-wrap;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+th,
+td {
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #eee;
+}
+
+
+th {
+    background: #f8fafc;
+
+    color: #333;
+}
+
+
+/* =========================
+   DELETE BUTTON
+========================= */
+
+.delete-btn {
+    background: #dc2626;
+
+    padding: 8px 14px;
+
+    font-size: 14px;
+}
+
+
+.delete-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message {
+    text-align: center;
+
+    color: #777;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+
+    .expense-form {
+        grid-template-columns: 1fr;
+    }
+
+
+    #addExpenseBtn {
+        grid-column: span 1;
+    }
+
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .table-header {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .ai-button {
+        width: 100%;
+    }
+
+
+    table {
+        min-width: 700px;
+    }
+
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Personal Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <h1>Personal Expense Tracker</h1>
+
+        <p class="subtitle">
+            Track and manage your daily expenses
+        </p>
+
+
+        <!-- =========================
+             EXPENSE FORM
+        ========================== -->
+
+        <div class="expense-form">
+
+            <div class="form-group">
+
+                <label for="expenseTitle">
+                    Expense Title
+                </label>
+
+                <input
+                    type="text"
+                    id="expenseTitle"
+                    placeholder="e.g. Lunch"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="amount">
+                    Amount
+                </label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="e.g. 500"
+                    min="1"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="category">
+                    Category
+                </label>
+
+                <select id="category">
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="Food">
+                        Food
+                    </option>
+
+                    <option value="Travel">
+                        Travel
+                    </option>
+
+                    <option value="Shopping">
+                        Shopping
+                    </option>
+
+                    <option value="Bills">
+                        Bills
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="date">
+                    Date
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                >
+
+            </div>
+
+
+            <button id="addExpenseBtn">
+                Add Expense
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             SUMMARY
+        ========================== -->
+
+        <div class="summary">
+
+            <div class="summary-card">
+
+                <h3>
+                    Total Expenses
+                </h3>
+
+                <p id="totalExpenses">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>
+                    Total Amount Spent
+                </h3>
+
+                <p>
+                    Rs. <span id="totalAmount">0</span>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             EXPENSE TABLE
+        ========================== -->
+
+        <div class="table-container">
+
+            <div class="table-header">
+
+                <h2>
+                    All Expenses
+                </h2>
+
+                <button id="analyzeBtn" class="ai-button">
+                    🤖 Analyze My Expenses
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 AI RESULT
+            ========================== -->
+
+            <div
+                id="aiResult"
+                class="ai-result hidden"
+            ></div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Title
+                            </th>
+
+                            <th>
+                                Amount
+                            </th>
+
+                            <th>
+                                Category
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="expenseTableBody">
+
+                        <!-- Expenses will appear here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script
+        type="module"
+        src="app.js"
+    ></script>
+
+</body>
+
+</html>
